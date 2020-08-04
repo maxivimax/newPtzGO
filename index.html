@@ -7,6 +7,17 @@
 
 <!-- подключаем к ней плагин highlight.js -->
 
+    <script language="javascript">
+        var i=1;
+        var image=document.getElementById("image");
+        // Добавьте свои картинки в массив через запятую
+        var imgs=new Array('./img/actor.jpg','./img/celeb.jpg');
+        function imgsrc() {
+            i++;i%=imgs.length;
+            image.src = imgs[i];
+        }
+    </script>
+
 <script src='https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/highlight.min.js'/></script>
     <script>
       function MyFunction() {
@@ -101,7 +112,7 @@
         </ul>
     </nav>
 
-    <div class="fixed-bottom m-0 p-0" style="background-color: #171717; border-top-left-radius: 25px; border-top-right-radius: 25px;">
+    <div class="fixed-bottom m-0 p-0" style="background-color: #171717; border-top-left-radius: 20px; border-top-right-radius: 20px;">
  <!--        <div class="row text-center m-0 px-0 py-3">
 
             <div class="col-10">
@@ -117,10 +128,10 @@
         </div> -->
         <div class="row text-center m-0 px-0 py-1" style="height:55px;">
             <span class="col-1"></span>
-            <a class="col" href="#razvl"><img class="img-fluid py-1" style="height:50px;" src="./img/celeb.png"></a>
-            <a class="col" href="#priroda"><img class="img-fluid py-1" style="height:50px;" src="./img/nature.png"></a>
-            <a class="col" href="#cafe"><img class="img-fluid py-1" style="height:50px;" src="./img/food.png"></a>
-            <a class="col" href="#museum"><img class="img-fluid py-1" style="height:50px;" src="./img/museum.png"></a>
+            <a class="col" name="1" href="#razvl"><img class="img-fluid py-1" onclick='this.src="./img/icons/celebnew.png"' style="height:50px;" src="./img/icons/celeb.png"></a>
+            <a class="col" name="nar" href="#priroda"><img class="img-fluid py-1" onclick='this.src="./img/icons/naturenew.png"' style="height:50px;" src="./img/icons/nature.png"></a>
+            <a class="col" name="3" href="#cafe"><img class="img-fluid py-1" onclick='this.src="./img/icons/foodnew.png"' style="height:50px;" src="./img/icons/food.png"></a>
+            <a class="col" name="4" href="#museum"><img class="img-fluid py-1" onclick='this.src="./img/icons/museumnew.png"' style="height:50px;" src="./img/icons/museum.png"></a>
             <span class="col-1"></span> 
         </div>
     </div>
