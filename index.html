@@ -18,17 +18,56 @@
         }
     </script>
 
+<script type="text/javascript">
+function scroll(elem)
+{
+    var docViewTop = $(window).scrollTop();
+    var docViewBottom = docViewTop + $(window).height();
+
+    var elemTop = $(elem).offset().top;
+    var elemBottom = elemTop + $(elem).height();
+
+    alert((elemBottom <= docViewBottom) && (elemTop >= docViewTop));
+
+    return ((elemBottom <= docViewBottom) && (elemTop >= docViewTop));
+}
+</script>
+
 <script src='https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/highlight.min.js'/></script>
     <script>
-      function MyFunction() {
-        var x = document.getElementById("menu");
-        x.style = "transform: translate(100%)";
-      }
-      function Close() {
-        var y = document.getElementById("menu");
-        y.style = "transform: translate(-100%)";
-      }
-    </script>
+        var a = 0;
+        var b = 0;
+        var c = 0;
+        var d = 0;
+      function colorButton(a, b, c, d) {
+            m = a.name
+            if (m == "but1"){
+                a.src = "./img/icons/celebnew.png";
+                b.src = "./img/icons/nature.png";
+                c.src = "./img/icons/food.png";
+                d.src = "./img/icons/museum.png";
+            }
+            if (m == "but2"){
+                a.src = "./img/icons/naturenew.png";
+                b.src = "./img/icons/celeb.png";
+                c.src = "./img/icons/food.png";
+                d.src = "./img/icons/museum.png";
+            }
+            if (m == "but3"){
+                a.src = "./img/icons/foodnew.png";
+                b.src = "./img/icons/nature.png";
+                c.src = "./img/icons/celeb.png";
+                d.src = "./img/icons/museum.png";
+            }
+            if (m == "but4"){
+                a.src = "./img/icons/museumnew.png";
+                b.src = "./img/icons/nature.png";
+                c.src = "./img/icons/food.png";
+                d.src = "./img/icons/celeb.png";
+            }
+
+          }
+</script>
     <!-- Required meta tags -->
 
     <meta charset="utf-8">
@@ -92,11 +131,7 @@
 
 
 <body id="test"class="container-fluid" style="background-image: url('./img/minibackground.png');">
-<div class="preloader">
-  
-    <img src="./Group 61.png" class="img-fluid"></img>
-
-</div> 
+ 
 
     <nav id="menu">
         <ul>
@@ -126,12 +161,12 @@
 
             </div>
         </div> -->
-        <div class="row text-center m-0 px-0 py-1" style="height:55px;">
+        <div class="row text-center m-0 px-0 py-1" style="height:55px;"> <!-- colorButton(this, but2, but3, but4); -->
             <span class="col-1"></span>
-            <a class="col" name="1" href="#razvl"><img class="img-fluid py-1" onclick='this.src="./img/icons/celebnew.png"' style="height:50px;" src="./img/icons/celeb.png"></a>
-            <a class="col" name="nar" href="#priroda"><img class="img-fluid py-1" onclick='this.src="./img/icons/naturenew.png"' style="height:50px;" src="./img/icons/nature.png"></a>
-            <a class="col" name="3" href="#cafe"><img class="img-fluid py-1" onclick='this.src="./img/icons/foodnew.png"' style="height:50px;" src="./img/icons/food.png"></a>
-            <a class="col" name="4" href="#museum"><img class="img-fluid py-1" onclick='this.src="./img/icons/museumnew.png"' style="height:50px;" src="./img/icons/museum.png"></a>
+            <a class="col" name="1" href="#razvl"><img class="img-fluid py-1" name="but1" onclick='scroll(divlol.razvl);' style="height:50px;" src="./img/icons/celeb.png"></a>
+            <a class="col" name="nar" href="#priroda"><img name="but2" class="img-fluid py-1" onclick='colorButton(this, but1, but3, but4);' style="height:50px;" src="./img/icons/nature.png"></a>
+            <a class="col" name="3" href="#cafe"><img name="but3" class="img-fluid py-1" onclick='colorButton(this, but2, but1, but4);' style="height:50px;" src="./img/icons/food.png"></a>
+            <a class="col" name="4" href="#museum"><img name="but4" class="img-fluid py-1" onclick='colorButton(this, but2, but3, but1);' style="height:50px;" src="./img/icons/museum.png"></a>
             <span class="col-1"></span> 
         </div>
     </div>
@@ -144,8 +179,8 @@
         </div>
     </div>
 
-<div class="container-fluid p-0 m-0">
-        <a name="razvl">РАЗВЛЕЧЕНИЯ--------------</af>
+<div name="divlol" class="container-fluid p-0 m-0">
+        <a name="razvl">РАЗВЛЕЧЕНИЯ--------------</a>
 
         <div class="row text-center">
 
