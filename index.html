@@ -327,7 +327,7 @@ setTimeout(keke(htmm.lolkee, htmm.lolkee2, htmm.lolkee3, htmm.lolkee4, htmm.but1
             <div class="w-100"></div>
 
                         <div class="col p-1">
-                <a href="./mesta/Lazerfrag/Lazerfrag.html"><span style="visibility: hidden;">Лазерфраг</span><img src="./img/laserfrag.png" alt="" id="Лотос Плаза" class="img-fluid"></a>
+                <a  href="./mesta/Lazerfrag/Lazerfrag.html"><span id="lolkee5" style="visibility: hidden;">Лазерфраг</span><img id="lolkee5" src="./img/laserfrag.png" alt="" id="Лотос Плаза" class="img-fluid"></a>
             </div>
                     <div class="col p-1">
  
@@ -568,6 +568,12 @@ setInterval(function(){
         var elemBottom4 = elemTop4 + $(lolkee4).height();
         var truefalse4 = (elemBottom4 <= docViewBottom4) && (elemTop4 >= docViewTop4);
 
+        var docViewTop5 = $(window).scrollTop();
+        var docViewBottom5 = docViewTop5 + $(window).height();
+        var elemTop5 = $(lolkee5).offset().top;
+        var elemBottom5 = elemTop5 + $(lolkee5).height();
+        var truefalse5 = (elemBottom5 <= docViewBottom5) && (elemTop5 >= docViewTop5);
+
 
         if (truefalse1 == true){
 
@@ -602,6 +608,16 @@ setInterval(function(){
                             but2.src = "./img/icons/nature.png";
                             but3.src = "./img/icons/food.png";
                             but4.src = "./img/icons/museumnew.png"; 
+                            return;
+
+        }
+        else if (truefalse5 == true){
+                            
+
+                            but1.src = "./img/icons/celebnew.png";
+                            but2.src = "./img/icons/nature.png";
+                            but3.src = "./img/icons/food.png";
+                            but4.src = "./img/icons/museum.png"; 
                             return;
 
         }
