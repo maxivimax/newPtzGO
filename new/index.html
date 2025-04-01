@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="PtzGO - Путеводитель по Петрозаводску">
+    <meta name="theme-color" content="#171717">
+    
+    <title>PtzGO - Путеводитель по Петрозаводску</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="./img/icon.png">
+    
+    <!-- Modern CSS Framework -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./css/style.css">
+    
+    <!-- Modern JavaScript -->
+    <script src="https://unpkg.com/alpinejs" defer></script>
+    
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript">
+        (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+        (window, document, "script", "https://cdn.jsdelivr.net/npm/yandex-metrica-watch/tag.js", "ym");
+        ym(66229156, "init", {
+            clickmap:true,
+            trackLinks:true,
+            accurateTrackBounce:true,
+            webvisor:true
+        });
+    </script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/66229156" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+</head>
+
+<body class="bg-gradient-to-b from-gray-900 to-yellow-900 min-h-screen" x-data="{ menuOpen: false }">
+    <!-- Header -->
+    <header class="fixed top-0 left-0 right-0 z-50">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <button @click="menuOpen = !menuOpen" class="text-white hover:text-gray-300 transition-all duration-300">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                </button>
+                <h1 class="text-2xl font-bold">PtzGO</h1>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div x-show="menuOpen" 
+         x-transition:enter="transition ease-out duration-300"
+         x-transition:enter-start="opacity-0 transform -translate-x-full"
+         x-transition:enter-end="opacity-100 transform translate-x-0"
+         x-transition:leave="transition ease-in duration-300"
+         x-transition:leave-start="opacity-100 transform translate-x-0"
+         x-transition:leave-end="opacity-0 transform -translate-x-full"
+         class="mobile-menu">
+        <div class="mobile-menu-content">
+            <h2 class="text-2xl font-bold mb-8">О проекте</h2>
+            <div class="space-y-4">
+                <a href="ja.html">Проект выполнен учениками Детского Технопарка "Кванториум Сампо"</a>
+                <a href="https://vk.com/kvantorium_sampo">vk.com/kvantorium_sampo</a>
+                <p class="text-lg">При поддержке ПМУП "Агентство городского развития"</p>
+                <img src="./img/podde.png" alt="Агентство городского развития">
+                <a href="https://agr10.ru/">agr10.ru</a>
+                <p class="text-lg">Хочешь увидеть своё любимое место в нашей ленте?</p>
+                <a href="mailto:PtzGO2020@yandex.ru">PtzGO2020@yandex.ru</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 pt-20 pb-24">
+        <!-- Navigation Tabs -->
+        <nav class="fixed bottom-0 left-0 right-0 z-40 bg-gray-900 bg-opacity-90 backdrop-blur-sm border-t border-gray-800">
+            <div class="container mx-auto px-4">
+                <div class="flex justify-around items-center h-16">
+                    <button class="nav-tab" data-category="razvl">
+                        <img src="./img/icons/celeb.png" alt="Развлечения" class="w-8 h-8">
+                    </button>
+                    <button class="nav-tab" data-category="priroda">
+                        <img src="./img/icons/nature.png" alt="Природа" class="w-8 h-8">
+                    </button>
+                    <button class="nav-tab" data-category="cafe">
+                        <img src="./img/icons/food.png" alt="Кафе" class="w-8 h-8">
+                    </button>
+                    <button class="nav-tab" data-category="museum">
+                        <img src="./img/icons/museum.png" alt="Музеи" class="w-8 h-8">
+                    </button>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Places Grid -->
+        <div class="grid grid-cols-2 gap-4" id="places-grid">
+            <!-- Places will be dynamically loaded here -->
+        </div>
+    </main>
+
+    <!-- Custom JavaScript -->
+    <script src="./js/main.js"></script>
+</body>
+</html>

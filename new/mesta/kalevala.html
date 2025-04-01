@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+  <meta charset="utf-8" />
+  <link
+    rel="stylesheet"
+    href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+    crossorigin="anonymous"
+  />
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="../css/allstyle.css" />
+  <script src="https://maps.api.2gis.ru/2.0/loader.js?pkg=full"></script>
+
+  <script type="text/javascript">
+    var map;
+    DG.then(function () {
+      map = DG.map("map", {
+        center: [61.764401, 34.349096],
+        zoom: 20,
+      });
+      var myIcon = DG.icon({
+        iconUrl: "https://pngimg.com/uploads/gps/gps_PNG42.png",
+        iconSize: [38, 50],
+      });
+      DG.marker([61.764401, 34.349096], { icon: myIcon })
+        .addTo(map)
+        .bindPopup("Курган");
+    });
+  </script>
+  <head>
+    <link rel="shortcut icon" href="img/icon.png" type="image/png" />
+
+    <title>PtzGO</title>
+
+    <style>
+      body {
+        background: url(../img/minibackground.png);
+        -moz-background-size: 100%;
+        -webkit-background-size: 100%;
+        -o-background-size: 100%;
+        background-size: 100%;
+        /*ОПтимизация под браузеры*/
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1 class="mestaname">Курган</h1>
+    <h1 class="mestaopis">Горнолыжный комплекс</h1>
+    <div class="upmesta">
+      <img src="../img/upMap.png" alt="" style="width: 153%; height: 150%;" />
+    </div>
+    <div>
+      <a class="backmesta" href="../index.html">
+        <img
+          src="../img/backmesta.png"
+          alt="Info"
+          title="Info"
+          width="90"
+          height="80"
+        />
+      </a>
+      <div class="otziv">
+        <img src="../img/otziv.png" alt="" width="750" />
+      </div>
+      <div class="photokalevala">
+        <img src="../img/kalevalaphoto.png" alt="" width="1000" />
+      </div>
+      <!--<div class="location">
+        <img src="../img/location.png" alt="" width="1220" />
+      </div>-->
+      <div id="map" class="location" style="width: 153%; height: 70%;"></div>
+      <div
+        id="map_Beach"
+        style="
+          z-index: -1;
+          position: fixed;
+          width: 100%;
+          height: 100%;
+          padding: 0px;
+          margin: 0px;
+        "
+      ></div>
+      <div class="footermesta">
+        <img src="../img/footermesta.png" alt="" width="1220" />
+      </div>
+      <a href="tel:+78142332929">8 (8142) 33-29-29</a>
+    </div>
+  </body>
+</html>

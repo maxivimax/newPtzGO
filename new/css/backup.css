@@ -1,0 +1,45 @@
+            .menu-list {
+                padding-top: 10%;
+                padding-left: 100px;
+                color:black;
+                font-size: 35px;
+                z-index: 999;
+                display: flex;
+                justify-content: space-between;
+                align-items: right;
+                height: 40%;
+                flex-direction: column;
+                border-color: white white #c72d2d white;
+                border-style: solid;
+                height: 50%;
+            }
+
+        <script src="https://maps.api.2gis.ru/2.0/loader.js?pkg=full"></script>
+
+            <div id="map" style="z-index: 2; position: fixed; width:100%; height:100%;padding:0px; margin:0px;"></div>
+        <button class = 'under' onclick="Beauty_open()">  красота  </button><button onclick = "Cafe_open()" class = 'under1' >  кафе  </button><button class = 'under2' onclick="Museum_open()">  музеи  </button><button class = 'under3' onclick="Cinema_open()">  кино  </button></div>
+
+                <script type="text/javascript">
+            var map;
+
+            DG.then(function () {
+                map = DG.map('map', {
+                    center: [61.7849, 34.3469],
+                    zoom: 15
+                });
+            });
+        </script>
+        <script type="text/javascript">
+            var map_Beach;
+            DG.then(function () {
+                map_Beach = DG.map('map_Beach', {
+                    center: [61.83205209103277,34.30693933379714],
+                    zoom: 13
+                });
+                var myIcon = DG.icon({
+                    iconUrl: 'https://pngimg.com/uploads/gps/gps_PNG42.png',
+                    iconSize: [38, 50],
+                });
+                DG.marker([61.8328793597141,34.30748050799561], {icon: myIcon}).addTo(map_Beach).bindPopup('Пляж Пески.');
+            });
+        </script>

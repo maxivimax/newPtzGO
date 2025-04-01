@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="PtzGO - Путеводитель по Петрозаводску">
+    <meta name="theme-color" content="#171717">
+    
+    <title>PtzGO - [НАЗВАНИЕ МЕСТА]</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="../img/icon.png">
+    
+    <!-- Modern CSS Framework -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+    
+    <!-- 2GIS Map -->
+    <script src="https://maps.api.2gis.ru/2.0/loader.js?pkg=full"></script>
+</head>
+
+<body class="place-page">
+    <!-- Back Button -->
+    <a href="../index.html" class="back-button">
+        <img src="../img/backmesta.png" alt="Назад">
+    </a>
+
+    <!-- Header -->
+    <header class="place-header">
+        <img src="../img/[ФОТО_МЕСТА]" alt="[НАЗВАНИЕ МЕСТА]">
+        <div class="place-header-content">
+            <h1 class="place-title">[НАЗВАНИЕ МЕСТА]</h1>
+            <p class="place-subtitle">[ТИП МЕСТА]</p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="place-content">
+        <!-- Gallery Section -->
+        <section class="place-section">
+            <h2>Фотографии</h2>
+            <div class="place-gallery">
+                <img src="../img/[ФОТО_1]" alt="[НАЗВАНИЕ МЕСТА]">
+                <img src="../img/[ФОТО_2]" alt="[НАЗВАНИЕ МЕСТА]">
+                <img src="../img/[ФОТО_3]" alt="[НАЗВАНИЕ МЕСТА]">
+            </div>
+        </section>
+
+        <!-- Map Section -->
+        <section class="place-section">
+            <h2>Расположение</h2>
+            <div id="map" class="place-map"></div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="place-section">
+            <h2>Контакты</h2>
+            <div class="place-contact">
+                <a href="tel:[ТЕЛЕФОН]">[ТЕЛЕФОН]</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="place-footer">
+        <p>© 2024 PtzGO - Путеводитель по Петрозаводску</p>
+    </footer>
+
+    <!-- Map Initialization -->
+    <script>
+        var map;
+        DG.then(function () {
+            map = DG.map("map", {
+                center: [61.7752, 34.3067], // Координаты места
+                zoom: 20,
+            });
+            var myIcon = DG.icon({
+                iconUrl: "https://pngimg.com/uploads/gps/gps_PNG42.png",
+                iconSize: [38, 50],
+            });
+            DG.marker([61.7752, 34.3067], { icon: myIcon })
+                .addTo(map)
+                .bindPopup("[НАЗВАНИЕ МЕСТА]");
+        });
+    </script>
+</body>
+</html> 
