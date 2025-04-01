@@ -1,17 +1,22 @@
 <!DOCTYPE html>
-<html>
-  <meta charset="utf-8" />
-  <link
-    rel="stylesheet"
-    href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
-    crossorigin="anonymous"
-  />
-  <link
-    href="https://fonts.googleapis.com/css?family=Open+Sans:300&display=swap"
-    rel="stylesheet"
-  />
-  <link rel="stylesheet" href="../css/allstyle.css" />
+<html lang="ru">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="PtzGO - Путеводитель по Петрозаводску">
+  <meta name="theme-color" content="#171717">
+
+  <title>PtzGO - Лотос Плаза</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="../img/icon.png">
+
+  <!-- Modern CSS Framework -->
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="../css/style.css">
+
+  <!-- 2GIS Map -->
   <script src="https://maps.api.2gis.ru/2.0/loader.js?pkg=full"></script>
 
   <script type="text/javascript">
@@ -47,6 +52,46 @@
     </style>
   </head>
 
+  <body class="place-page">
+    <!-- Back Button -->
+    <a href="../index.html" class="back-button">
+      <img src="../img/backmesta.png" alt="Назад">
+    </a>
+
+    <!-- Header -->
+    <header class="place-header">
+      <img src="../img/photolotos.jpeg" alt="Лотос Плаза">
+      <div class="place-header-content">
+        <h1 class="place-title">Лотос Плаза</h1>
+        <p class="place-subtitle">Торгово-развлекательный центр</p>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="place-content">
+      <!-- Gallery Section -->
+      <section class="place-section">
+        <h2>Фотографии</h2>
+        <div class="place-gallery">
+          <img src="../img/photolotos.jpeg" alt="Лотос Плаза">
+          <img src="../img/photolotos.jpeg" alt="Лотос Плаза">
+          <img src="../img/photolotos.jpeg" alt="Лотос Плаза">
+        </div>
+      </section>
+
+      <!-- Map Section -->
+      <section class="place-section">
+        <h2>Расположение</h2>
+        <div id="map" class="place-map"></div>
+      </section>
+
+      <!-- Contact Section -->
+      <section class="place-section">
+        <h2>Контакты</h2>
+        <div class="place-contact">
+          <a href="tel:+78142222205">+7 (8142) 22-22-05</a>
+        </div>
+      </section>
   <body>
     <h1 class="mestaname">Лотос Плаза</h1>
     <h1 class="mestaopis">ТРЦ</h1>
